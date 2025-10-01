@@ -73,7 +73,9 @@ export const router = createBrowserRouter([
       },
     ],
   },
-]);
+], {
+  basename: '/learn_claude_flow'
+});
 
 // App entry point
 export function AppRouter() {
