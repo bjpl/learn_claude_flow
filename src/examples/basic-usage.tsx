@@ -5,10 +5,18 @@
  */
 
 import React, { useState } from 'react';
-import { DocumentViewer } from '../components/documentation/DocumentViewer';
 import { DocumentList } from '../components/documentation/DocumentList';
 import { SearchBar } from '../components/documentation/SearchBar';
 import type { Document } from '../types/document';
+
+// Note: DocumentViewer component not yet implemented
+const DocumentViewer = ({ document, onClose }: any) => (
+  <div>
+    <h2>{document.title}</h2>
+    <p>Document viewer placeholder for: {document.filePath}</p>
+    {onClose && <button onClick={onClose}>Close</button>}
+  </div>
+);
 
 // ========================================
 // Example 1: Simple PDF Viewer

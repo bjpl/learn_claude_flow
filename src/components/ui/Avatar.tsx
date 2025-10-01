@@ -77,6 +77,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       overflow: 'hidden',
       flexShrink: 0,
       position: 'relative',
+      ...style,
     };
 
     const statusSize = size === 'xs' || size === 'sm' ? '8px' : '12px';

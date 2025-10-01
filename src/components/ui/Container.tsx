@@ -70,10 +70,11 @@ export const Container = React.forwardRef<HTMLElement, ContainerProps>(
       containerStyles.paddingRight = semanticSpacing.pageMarginMobile;
     }
 
+    const ElementComponent = Component as any;
     return (
-      <Component ref={ref as React.Ref<any>} className={className} style={containerStyles}>
+      <ElementComponent ref={ref} className={className} style={containerStyles}>
         {children}
-      </Component>
+      </ElementComponent>
     );
   }
 );

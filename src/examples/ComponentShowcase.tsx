@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import {
-  Stack,
   VStack,
   HStack,
   Grid,
   Container,
   Text,
   Heading,
-  Button,
-  Card,
-  Input,
   Select,
   Checkbox,
   Radio,
@@ -26,9 +22,14 @@ import {
   Avatar,
   AvatarGroup,
   Divider,
-  Badge,
-  Progress,
 } from '../components/ui';
+
+// Note: These components not yet implemented in design-system
+const Button = ({ children, ...props }: any) => <button {...props}>{children}</button>;
+const Card = ({ children, ...props }: any) => <div {...props}>{children}</div>;
+const Input = ({ ...props }: any) => <input {...props} />;
+const Badge = ({ children, ...props }: any) => <span {...props}>{children}</span>;
+const Progress = ({ ...props }: any) => <div {...props}>Progress</div>;
 
 /**
  * Component Showcase - Demonstrates all UI components
@@ -155,7 +156,7 @@ export const ComponentShowcase: React.FC = () => {
               <Input
                 placeholder="Enter text..."
                 value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInputValue(e.target.value)}
               />
               <Input type="email" placeholder="email@example.com" />
               <Input type="password" placeholder="Password" />
