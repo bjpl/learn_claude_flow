@@ -21,6 +21,11 @@ export default defineConfig({
         // Manual chunk splitting for optimal bundle size
         // Target: <200KB initial bundle, lazy load heavy dependencies
         manualChunks: (id) => {
+          // Skip lucide-react - keep it in main bundle to prevent load order issues
+          if (id.includes('node_modules/lucide-react')) {
+            return undefined; // Keep in main bundle
+          }
+
           // React core libraries (shared, ~140KB)
           // MUST be loaded first - other libraries depend on it
           if (id.includes('node_modules/react/') ||
@@ -52,8 +57,7 @@ export default defineConfig({
             return 'state-vendor';
           }
 
-          // UI utilities and icons (moderate size, ~40KB)
-          // Keep lucide-react with main bundle to ensure React is loaded first
+          // UI utilities (moderate size, ~40KB)
           if (id.includes('node_modules/clsx')) {
             return 'ui-vendor';
           }
