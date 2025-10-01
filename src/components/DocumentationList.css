@@ -1,0 +1,132 @@
+.documentation-list {
+  padding: 1rem;
+}
+
+.documentation-list--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.documentation-list__category {
+  margin-bottom: 1.5rem;
+}
+
+.documentation-list__category:last-child {
+  margin-bottom: 0;
+}
+
+.documentation-list__category-title {
+  margin: 0 0 0.5rem 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.documentation-list__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.documentation-list__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.documentation-list__item--selected {
+  background: #eff6ff;
+}
+
+.documentation-list__button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.75rem;
+  border: none;
+  background: transparent;
+  color: #374151;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.documentation-list__button:hover {
+  background: #f3f4f6;
+}
+
+.documentation-list__button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: -2px;
+}
+
+.documentation-list__item--selected .documentation-list__button {
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.documentation-list__item-name {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.documentation-list__item-date {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.documentation-list__bookmark {
+  flex-shrink: 0;
+  padding: 0.5rem;
+  border: none;
+  background: transparent;
+  color: #d1d5db;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.documentation-list__bookmark:hover {
+  color: #fbbf24;
+}
+
+.documentation-list__bookmark:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: -2px;
+}
+
+.documentation-list__bookmark--active {
+  color: #fbbf24;
+}
+
+.documentation-list__bookmark-icon {
+  display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .documentation-list {
+    padding: 0.5rem;
+  }
+
+  .documentation-list__button {
+    padding: 0.5rem;
+  }
+
+  .documentation-list__item-name {
+    font-size: 0.8125rem;
+  }
+}

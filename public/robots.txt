@@ -1,0 +1,34 @@
+# robots.txt for Learn Claude Flow
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow search result pages to prevent duplicate content
+Disallow: /search?*
+
+# Disallow admin/settings pages
+Disallow: /settings
+
+# Sitemap location
+Sitemap: https://learn-claude-flow.example.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Specific bot rules
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1

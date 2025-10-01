@@ -1,0 +1,124 @@
+{
+  "analysis": {
+    "id": "pdf-analysis-20250930",
+    "date": "2025-09-30T21:36:08.494Z",
+    "agent": "PDF Content Analyst",
+    "taskId": "pdf-analysis"
+  },
+  "input": {
+    "directory": "/mnt/c/Users/brand/Downloads/ilovepdf_split",
+    "fileCount": 24,
+    "filePattern": "documentation-*.pdf"
+  },
+  "output": {
+    "contentIndex": "docs/content-index.json",
+    "summary": "docs/content-analysis-summary.md",
+    "metadata": "docs/analysis-metadata.json"
+  },
+  "statistics": {
+    "totalDocuments": 24,
+    "totalPages": 590,
+    "averagePagesPerDoc": 24.6,
+    "totalTextLength": 642615,
+    "averageTextLength": 26776,
+    "processingTime": "~8 seconds",
+    "relationshipsFound": 276,
+    "uniqueTopics": 133,
+    "uniqueKeywords": 35
+  },
+  "topKeywords": [
+    { "keyword": "json", "documentCount": 20, "totalOccurrences": 436 },
+    { "keyword": "performance", "documentCount": 23, "totalOccurrences": 352 },
+    { "keyword": "javascript", "documentCount": 16, "totalOccurrences": 341 },
+    { "keyword": "type", "documentCount": 22, "totalOccurrences": 297 },
+    { "keyword": "api", "documentCount": 18, "totalOccurrences": 227 },
+    { "keyword": "error", "documentCount": 18, "totalOccurrences": 213 },
+    { "keyword": "configuration", "documentCount": 16, "totalOccurrences": 138 },
+    { "keyword": "security", "documentCount": 16, "totalOccurrences": 136 },
+    { "keyword": "model", "documentCount": 13, "totalOccurrences": 123 },
+    { "keyword": "monitoring", "documentCount": 16, "totalOccurrences": 94 }
+  ],
+  "topTopics": [
+    { "topic": "json", "documentCount": 15 },
+    { "topic": "performance", "documentCount": 15 },
+    { "topic": "type", "documentCount": 14 },
+    { "topic": "javascript", "documentCount": 10 },
+    { "topic": "api", "documentCount": 9 },
+    { "topic": "configuration", "documentCount": 8 },
+    { "topic": "model", "documentCount": 6 },
+    { "topic": "error", "documentCount": 6 },
+    { "topic": "session", "documentCount": 5 },
+    { "topic": "testing", "documentCount": 5 }
+  ],
+  "documentOverview": {
+    "smallest": {
+      "filename": "documentation-24.pdf",
+      "pages": 15,
+      "textLength": 12926
+    },
+    "largest": {
+      "filename": "documentation-1.pdf",
+      "pages": 25,
+      "textLength": 33775
+    },
+    "mostHeadings": {
+      "filename": "documentation-22.pdf",
+      "headings": 77
+    }
+  },
+  "contentCategories": {
+    "coreCommands": ["documentation-1.pdf", "documentation-2.pdf"],
+    "advancedFeatures": ["documentation-3.pdf", "documentation-4.pdf"],
+    "configuration": ["documentation-5.pdf", "documentation-6.pdf"],
+    "pluginManagement": ["documentation-7.pdf", "documentation-8.pdf"],
+    "useCases": ["documentation-9.pdf", "documentation-10.pdf", "documentation-11.pdf"],
+    "specializedResearch": ["documentation-13.pdf", "documentation-14.pdf", "documentation-15.pdf"],
+    "integration": ["documentation-19.pdf", "documentation-20.pdf"],
+    "troubleshooting": ["documentation-22.pdf", "documentation-23.pdf"],
+    "reference": ["documentation-24.pdf"]
+  },
+  "strongestRelationships": [
+    {
+      "doc1": "documentation-17.pdf",
+      "doc2": "documentation-22.pdf",
+      "commonKeywords": 12,
+      "commonTopics": 5,
+      "strength": 22,
+      "category": "Troubleshooting & Performance"
+    },
+    {
+      "doc1": "documentation-3.pdf",
+      "doc2": "documentation-5.pdf",
+      "commonKeywords": 13,
+      "commonTopics": 4,
+      "strength": 21,
+      "category": "Advanced Features & Configuration"
+    },
+    {
+      "doc1": "documentation-10.pdf",
+      "doc2": "documentation-23.pdf",
+      "commonKeywords": 9,
+      "commonTopics": 5,
+      "strength": 19,
+      "category": "Training & Performance"
+    }
+  ],
+  "tools": {
+    "pdfParser": "pdf-parse",
+    "runtime": "Node.js",
+    "storage": "SQLite (via claude-flow hooks)",
+    "coordination": "claude-flow@alpha"
+  },
+  "memoryKeys": {
+    "contentIndex": "swarm/content-analysis/index",
+    "summary": "swarm/content-analysis/summary",
+    "task": "swarm/pdf-analysis"
+  },
+  "nextSteps": [
+    "Use content-index.json for building search functionality",
+    "Leverage relationship data for related documents features",
+    "Extract code blocks for syntax highlighting examples",
+    "Monitor keyword frequency for terminology consistency",
+    "Check topic coverage to identify documentation gaps"
+  ]
+}

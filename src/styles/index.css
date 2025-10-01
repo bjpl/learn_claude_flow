@@ -1,0 +1,62 @@
+/**
+ * Main Stylesheet - Documentation Component System
+ * Entry point for all styling
+ */
+
+/* Import design tokens and components */
+@import './design-tokens.css';
+@import './components.css';
+@import './utilities.css';
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Selection Styling */
+::selection {
+  background-color: var(--color-primary-200);
+  color: var(--color-neutral-900);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background-color: var(--color-primary-700);
+    color: var(--color-neutral-50);
+  }
+}
+
+/* Scrollbar Styling (Webkit) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-400);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-500);
+}
+
+/* Print Styles */
+@media print {
+  .doc-sidebar,
+  .doc-header {
+    display: none;
+  }
+
+  .doc-content {
+    max-width: 100%;
+  }
+}
