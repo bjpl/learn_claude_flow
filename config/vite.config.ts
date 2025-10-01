@@ -22,9 +22,10 @@ export default defineConfig({
         // Target: <200KB initial bundle, lazy load heavy dependencies
         manualChunks: (id) => {
           // React core libraries (shared, ~140KB)
-          if (id.includes('node_modules/react') ||
-              id.includes('node_modules/react-dom') ||
-              id.includes('node_modules/scheduler')) {
+          // MUST be loaded first - other libraries depend on it
+          if (id.includes('node_modules/react/') ||
+              id.includes('node_modules/react-dom/') ||
+              id.includes('node_modules/scheduler/')) {
             return 'react-vendor';
           }
 
@@ -52,8 +53,8 @@ export default defineConfig({
           }
 
           // UI utilities and icons (moderate size, ~40KB)
-          if (id.includes('node_modules/lucide-react') ||
-              id.includes('node_modules/clsx')) {
+          // Keep lucide-react with main bundle to ensure React is loaded first
+          if (id.includes('node_modules/clsx')) {
             return 'ui-vendor';
           }
 
