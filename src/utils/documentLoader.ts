@@ -28,40 +28,43 @@ export async function loadDocumentsFromDirectory(_basePath: string): Promise<Doc
 }
 
 /**
- * Load markdown files using Vite's import.meta.glob
- * This loads the actual content at build time
- */
-const markdownModules: Record<string, () => Promise<string>> = {};
-
-/**
- * Loads a single document's content
+ * Loads a single document's content by fetching from the public directory
  */
 export async function loadDocumentContent(filePath: string): Promise<string> {
-  // Convert the filePath to absolute path
-  const absolutePath = filePath.startsWith('/')
-    ? filePath
-    : `/mnt/c/Users/brand/Development/Project_Workspace${filePath}`;
+  try {
+    console.log('[LOADER] Loading document content from:', filePath);
 
-  const loader = markdownModules[absolutePath];
+    // Build the URL for the public file
+    // filePath is already in format: /.claude/agents/...
+    // Use the base path from vite config
+    const basePath = '/learn_claude_flow/';
+    const url = basePath + filePath.substring(1); // Remove leading /
 
-  if (loader) {
-    try {
-      const content = await loader();
-      return content;
-    } catch (error) {
-      console.error(`Error loading markdown file ${filePath}:`, error);
+    console.log('[LOADER] Fetching from URL:', url);
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
     }
-  }
 
-  // Fallback: return a message indicating the file couldn't be loaded
-  return `# Document Not Found
+    const content = await response.text();
+    console.log('[LOADER] Successfully loaded document, length:', content.length);
+
+    return content;
+  } catch (error) {
+    console.error(`[LOADER] Error loading markdown file ${filePath}:`, error);
+
+    return `# Document Not Found
 
 The requested document could not be loaded.
 
 **Path:** \`${filePath}\`
+**Error:** ${error instanceof Error ? error.message : 'Unknown error'}
 
-Please ensure the file exists in the .claude directory.
+Please ensure the file exists in the .claude directory and is accessible from the public folder.
 `;
+  }
 }
 
 /**
