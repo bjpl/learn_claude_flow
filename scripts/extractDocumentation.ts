@@ -24,7 +24,7 @@ interface DocumentMeta {
   content?: string;
 }
 
-const CLAUDE_DIR = path.resolve(__dirname, '../../../.claude');
+const CLAUDE_DIR = path.resolve(__dirname, '../.claude');
 const OUTPUT_FILE = path.resolve(__dirname, '../src/data/documents.ts');
 
 /**
