@@ -1,50 +1,12 @@
 /**
  * Auto-generated documentation manifest
- * Generated on: 2025-10-01T19:38:24.748Z
- * Total documents: 225
+ * Generated on: 2025-10-01T20:23:40.121Z
+ * Total documents: 224
  */
 
 import type { Document } from '../types';
 
 export const CLAUDE_DOCUMENTS: Document[] = [
-  {
-    "id": "claude",
-    "title": "Claude Code Configuration - SPARC Development Environment",
-    "url": "/.claude/CLAUDE.md",
-    "filePath": "/.claude/CLAUDE.md",
-    "type": "markdown",
-    "category": "General",
-    "tags": [
-      "CLAUDE"
-    ],
-    "description": "**ABSOLUTE RULES**:"
-  },
-  {
-    "id": "agents-migration_summary",
-    "title": "Claude Flow Commands to Agent System Migration Summary",
-    "url": "/.claude/agents/MIGRATION_SUMMARY.md",
-    "filePath": "/.claude/agents/MIGRATION_SUMMARY.md",
-    "type": "markdown",
-    "category": "Agents",
-    "tags": [
-      "agent",
-      "MIGRATION_SUMMARY"
-    ],
-    "description": "This document provides a complete migration plan for converting the existing command-based system (`.claude/commands/`) to the new intelligent agent-b"
-  },
-  {
-    "id": "agents-readme",
-    "title": "Claude Code Agents Directory Structure",
-    "url": "/.claude/agents/README.md",
-    "filePath": "/.claude/agents/README.md",
-    "type": "markdown",
-    "category": "Agents",
-    "tags": [
-      "agent",
-      "README"
-    ],
-    "description": "This directory contains sub-agent definitions organized by type and purpose. Each agent has specific capabilities, tool restrictions, and naming conve"
-  },
   {
     "id": "agents-analysis-code-analyzer",
     "title": "Code Analyzer Agent",
@@ -108,20 +70,6 @@ export const CLAUDE_DOCUMENTS: Document[] = [
       "generator"
     ],
     "description": "Claude Flow documentation"
-  },
-  {
-    "id": "agents-consensus-readme",
-    "title": "Distributed Consensus Builder Agents",
-    "url": "/.claude/agents/consensus/README.md",
-    "filePath": "/.claude/agents/consensus/README.md",
-    "type": "markdown",
-    "category": "Agents/Consensus",
-    "tags": [
-      "consensus",
-      "agent",
-      "README"
-    ],
-    "description": "This directory contains specialized agents for implementing advanced distributed consensus mechanisms and fault-tolerant coordination protocols. These"
   },
   {
     "id": "agents-consensus-byzantine-coordinator",
@@ -690,8 +638,23 @@ export const CLAUDE_DOCUMENTS: Document[] = [
     "description": "Integrate AI swarms with GitHub Actions to create intelligent, self-organizing CI/CD pipelines that adapt to your codebase through advanced multi-agen"
   },
   {
+    "id": "agents-goal-code-goal-planner",
+    "title": "SPARC-GOAP Integration",
+    "url": "/.claude/agents/goal/code-goal-planner.md",
+    "filePath": "/.claude/agents/goal/code-goal-planner.md",
+    "type": "markdown",
+    "category": "Agents/Goal",
+    "tags": [
+      "goal",
+      "agent",
+      "code",
+      "planner"
+    ],
+    "description": "The SPARC methodology enhances GOAP planning by providing a structured framework for each milestone:"
+  },
+  {
     "id": "agents-goal-goal-planner",
-    "title": "MCP Integration Examples",
+    "title": "Goal Planner",
     "url": "/.claude/agents/goal/goal-planner.md",
     "filePath": "/.claude/agents/goal/goal-planner.md",
     "type": "markdown",
@@ -701,7 +664,84 @@ export const CLAUDE_DOCUMENTS: Document[] = [
       "agent",
       "planner"
     ],
-    "description": "```javascript"
+    "description": "Claude Flow documentation"
+  },
+  {
+    "id": "agents-hive-mind-collective-intelligence-coordinator",
+    "title": "Core Responsibilities",
+    "url": "/.claude/agents/hive-mind/collective-intelligence-coordinator.md",
+    "filePath": "/.claude/agents/hive-mind/collective-intelligence-coordinator.md",
+    "type": "markdown",
+    "category": "Agents/Hive-mind",
+    "tags": [
+      "hive-mind",
+      "agent",
+      "collective",
+      "intelligence",
+      "coordinator"
+    ],
+    "description": "**MANDATORY: Write to memory IMMEDIATELY and FREQUENTLY**"
+  },
+  {
+    "id": "agents-hive-mind-queen-coordinator",
+    "title": "Core Responsibilities",
+    "url": "/.claude/agents/hive-mind/queen-coordinator.md",
+    "filePath": "/.claude/agents/hive-mind/queen-coordinator.md",
+    "type": "markdown",
+    "category": "Agents/Hive-mind",
+    "tags": [
+      "hive-mind",
+      "agent",
+      "queen",
+      "coordinator"
+    ],
+    "description": "**MANDATORY: Establish dominance hierarchy and write sovereign status**"
+  },
+  {
+    "id": "agents-hive-mind-scout-explorer",
+    "title": "Core Responsibilities",
+    "url": "/.claude/agents/hive-mind/scout-explorer.md",
+    "filePath": "/.claude/agents/hive-mind/scout-explorer.md",
+    "type": "markdown",
+    "category": "Agents/Hive-mind",
+    "tags": [
+      "hive-mind",
+      "agent",
+      "scout",
+      "explorer"
+    ],
+    "description": "**MANDATORY: Report all discoveries immediately to memory**"
+  },
+  {
+    "id": "agents-hive-mind-swarm-memory-manager",
+    "title": "Core Responsibilities",
+    "url": "/.claude/agents/hive-mind/swarm-memory-manager.md",
+    "filePath": "/.claude/agents/hive-mind/swarm-memory-manager.md",
+    "type": "markdown",
+    "category": "Agents/Hive-mind",
+    "tags": [
+      "hive-mind",
+      "agent",
+      "swarm",
+      "memory",
+      "manager"
+    ],
+    "description": "**MANDATORY: Continuously write and sync memory state**"
+  },
+  {
+    "id": "agents-hive-mind-worker-specialist",
+    "title": "Core Responsibilities",
+    "url": "/.claude/agents/hive-mind/worker-specialist.md",
+    "filePath": "/.claude/agents/hive-mind/worker-specialist.md",
+    "type": "markdown",
+    "category": "Agents/Hive-mind",
+    "tags": [
+      "hive-mind",
+      "agent",
+      "worker",
+      "specialist"
+    ],
+    "description": "**MANDATORY: Report status before, during, and after every task**"
   },
   {
     "id": "agents-neural-safla-neural",
@@ -716,20 +756,6 @@ export const CLAUDE_DOCUMENTS: Document[] = [
       "safla"
     ],
     "description": "```javascript"
-  },
-  {
-    "id": "agents-optimization-readme",
-    "title": "Performance Optimization Agents",
-    "url": "/.claude/agents/optimization/README.md",
-    "filePath": "/.claude/agents/optimization/README.md",
-    "type": "markdown",
-    "category": "Agents/Optimization",
-    "tags": [
-      "optimization",
-      "agent",
-      "README"
-    ],
-    "description": "This directory contains a comprehensive suite of performance optimization agents designed to maximize swarm efficiency, scalability, and reliability."
   },
   {
     "id": "agents-optimization-benchmark-suite",
@@ -880,20 +906,6 @@ export const CLAUDE_DOCUMENTS: Document[] = [
     "description": "You are a React Native Mobile Developer creating cross-platform mobile applications."
   },
   {
-    "id": "agents-swarm-readme",
-    "title": "Swarm Coordination Agents",
-    "url": "/.claude/agents/swarm/README.md",
-    "filePath": "/.claude/agents/swarm/README.md",
-    "type": "markdown",
-    "category": "Agents/Swarm",
-    "tags": [
-      "swarm",
-      "agent",
-      "README"
-    ],
-    "description": "This directory contains specialized swarm coordination agents designed to work with the claude-code-flow hive-mind system. Each agent implements a dif"
-  },
-  {
     "id": "agents-swarm-adaptive-coordinator",
     "title": "# Initialize with auto-detection",
     "url": "/.claude/agents/swarm/adaptive-coordinator.md",
@@ -955,7 +967,7 @@ export const CLAUDE_DOCUMENTS: Document[] = [
   },
   {
     "id": "agents-templates-coordinator-swarm-init",
-    "title": "# Check for existing swarms",
+    "title": "# Write initial status to memory",
     "url": "/.claude/agents/templates/coordinator-swarm-init.md",
     "filePath": "/.claude/agents/templates/coordinator-swarm-init.md",
     "type": "markdown",
@@ -967,7 +979,7 @@ export const CLAUDE_DOCUMENTS: Document[] = [
       "swarm",
       "init"
     ],
-    "description": "memory_search \"swarm_status\" | tail -1 || echo \"No existing swarms found\""
+    "description": "npx claude-flow@alpha memory store \"swarm/init/status\" \"{\\\"status\\\":\\\"initializing\\\",\\\"timestamp\\\":$(date +%s)}\" --namespace coordination"
   },
   {
     "id": "agents-templates-github-pr-manager",
@@ -2116,7 +2128,7 @@ export const CLAUDE_DOCUMENTS: Document[] = [
       "command",
       "overview"
     ],
-    "description": "Automatically coordinate, format, and learn from Claude Code operations using hooks."
+    "description": "Automatically coordinate, format, and learn from Claude Code operations using hooks with MCP tool integration."
   },
   {
     "id": "commands-hooks-post-edit",
@@ -2467,20 +2479,6 @@ export const CLAUDE_DOCUMENTS: Document[] = [
       "optimize"
     ],
     "description": "Optimize swarm topology for current workload."
-  },
-  {
-    "id": "commands-pair-readme",
-    "title": "👥 Pair Programming Command",
-    "url": "/.claude/commands/pair/README.md",
-    "filePath": "/.claude/commands/pair/README.md",
-    "type": "markdown",
-    "category": "Commands/Pair",
-    "tags": [
-      "pair",
-      "command",
-      "README"
-    ],
-    "description": "Collaborative development with real-time verification and AI assistance."
   },
   {
     "id": "commands-pair-commands",
@@ -3306,7 +3304,7 @@ export const CLAUDE_DOCUMENTS: Document[] = [
   }
 ];
 
-export const DOCUMENT_COUNT = 225;
+export const DOCUMENT_COUNT = 224;
 
 export const CATEGORIES = [
   "Agents",
@@ -3322,6 +3320,7 @@ export const CATEGORIES = [
   "Agents/Flow-nexus",
   "Agents/Github",
   "Agents/Goal",
+  "Agents/Hive-mind",
   "Agents/Neural",
   "Agents/Optimization",
   "Agents/Sparc",
@@ -3348,75 +3347,11 @@ export const CATEGORIES = [
   "Commands/Training",
   "Commands/Truth",
   "Commands/Verify",
-  "Commands/Workflows",
-  "General"
+  "Commands/Workflows"
 ];
 
 export const DOCUMENTS_BY_CATEGORY = new Map<string, Document[]>(
   [
-  [
-    "General",
-    [
-      {
-        "id": "claude",
-        "title": "Claude Code Configuration - SPARC Development Environment",
-        "url": "/.claude/CLAUDE.md",
-        "filePath": "/.claude/CLAUDE.md",
-        "type": "markdown",
-        "category": "General",
-        "tags": [
-          "CLAUDE"
-        ],
-        "description": "**ABSOLUTE RULES**:"
-      }
-    ]
-  ],
-  [
-    "Agents",
-    [
-      {
-        "id": "agents-migration_summary",
-        "title": "Claude Flow Commands to Agent System Migration Summary",
-        "url": "/.claude/agents/MIGRATION_SUMMARY.md",
-        "filePath": "/.claude/agents/MIGRATION_SUMMARY.md",
-        "type": "markdown",
-        "category": "Agents",
-        "tags": [
-          "agent",
-          "MIGRATION_SUMMARY"
-        ],
-        "description": "This document provides a complete migration plan for converting the existing command-based system (`.claude/commands/`) to the new intelligent agent-b"
-      },
-      {
-        "id": "agents-readme",
-        "title": "Claude Code Agents Directory Structure",
-        "url": "/.claude/agents/README.md",
-        "filePath": "/.claude/agents/README.md",
-        "type": "markdown",
-        "category": "Agents",
-        "tags": [
-          "agent",
-          "README"
-        ],
-        "description": "This directory contains sub-agent definitions organized by type and purpose. Each agent has specific capabilities, tool restrictions, and naming conve"
-      },
-      {
-        "id": "agents-base-template-generator",
-        "title": "Base Template Generator",
-        "url": "/.claude/agents/base-template-generator.md",
-        "filePath": "/.claude/agents/base-template-generator.md",
-        "type": "markdown",
-        "category": "Agents",
-        "tags": [
-          "agent",
-          "base",
-          "template",
-          "generator"
-        ],
-        "description": "Claude Flow documentation"
-      }
-    ]
-  ],
   [
     "Agents/Analysis",
     [
@@ -3482,22 +3417,28 @@ export const DOCUMENTS_BY_CATEGORY = new Map<string, Document[]>(
     ]
   ],
   [
-    "Agents/Consensus",
+    "Agents",
     [
       {
-        "id": "agents-consensus-readme",
-        "title": "Distributed Consensus Builder Agents",
-        "url": "/.claude/agents/consensus/README.md",
-        "filePath": "/.claude/agents/consensus/README.md",
+        "id": "agents-base-template-generator",
+        "title": "Base Template Generator",
+        "url": "/.claude/agents/base-template-generator.md",
+        "filePath": "/.claude/agents/base-template-generator.md",
         "type": "markdown",
-        "category": "Agents/Consensus",
+        "category": "Agents",
         "tags": [
-          "consensus",
           "agent",
-          "README"
+          "base",
+          "template",
+          "generator"
         ],
-        "description": "This directory contains specialized agents for implementing advanced distributed consensus mechanisms and fault-tolerant coordination protocols. These"
-      },
+        "description": "Claude Flow documentation"
+      }
+    ]
+  ],
+  [
+    "Agents/Consensus",
+    [
       {
         "id": "agents-consensus-byzantine-coordinator",
         "title": "# Verify network integrity before consensus",
@@ -4105,8 +4046,23 @@ export const DOCUMENTS_BY_CATEGORY = new Map<string, Document[]>(
     "Agents/Goal",
     [
       {
+        "id": "agents-goal-code-goal-planner",
+        "title": "SPARC-GOAP Integration",
+        "url": "/.claude/agents/goal/code-goal-planner.md",
+        "filePath": "/.claude/agents/goal/code-goal-planner.md",
+        "type": "markdown",
+        "category": "Agents/Goal",
+        "tags": [
+          "goal",
+          "agent",
+          "code",
+          "planner"
+        ],
+        "description": "The SPARC methodology enhances GOAP planning by providing a structured framework for each milestone:"
+      },
+      {
         "id": "agents-goal-goal-planner",
-        "title": "MCP Integration Examples",
+        "title": "Goal Planner",
         "url": "/.claude/agents/goal/goal-planner.md",
         "filePath": "/.claude/agents/goal/goal-planner.md",
         "type": "markdown",
@@ -4116,7 +4072,89 @@ export const DOCUMENTS_BY_CATEGORY = new Map<string, Document[]>(
           "agent",
           "planner"
         ],
-        "description": "```javascript"
+        "description": "Claude Flow documentation"
+      }
+    ]
+  ],
+  [
+    "Agents/Hive-mind",
+    [
+      {
+        "id": "agents-hive-mind-collective-intelligence-coordinator",
+        "title": "Core Responsibilities",
+        "url": "/.claude/agents/hive-mind/collective-intelligence-coordinator.md",
+        "filePath": "/.claude/agents/hive-mind/collective-intelligence-coordinator.md",
+        "type": "markdown",
+        "category": "Agents/Hive-mind",
+        "tags": [
+          "hive-mind",
+          "agent",
+          "collective",
+          "intelligence",
+          "coordinator"
+        ],
+        "description": "**MANDATORY: Write to memory IMMEDIATELY and FREQUENTLY**"
+      },
+      {
+        "id": "agents-hive-mind-queen-coordinator",
+        "title": "Core Responsibilities",
+        "url": "/.claude/agents/hive-mind/queen-coordinator.md",
+        "filePath": "/.claude/agents/hive-mind/queen-coordinator.md",
+        "type": "markdown",
+        "category": "Agents/Hive-mind",
+        "tags": [
+          "hive-mind",
+          "agent",
+          "queen",
+          "coordinator"
+        ],
+        "description": "**MANDATORY: Establish dominance hierarchy and write sovereign status**"
+      },
+      {
+        "id": "agents-hive-mind-scout-explorer",
+        "title": "Core Responsibilities",
+        "url": "/.claude/agents/hive-mind/scout-explorer.md",
+        "filePath": "/.claude/agents/hive-mind/scout-explorer.md",
+        "type": "markdown",
+        "category": "Agents/Hive-mind",
+        "tags": [
+          "hive-mind",
+          "agent",
+          "scout",
+          "explorer"
+        ],
+        "description": "**MANDATORY: Report all discoveries immediately to memory**"
+      },
+      {
+        "id": "agents-hive-mind-swarm-memory-manager",
+        "title": "Core Responsibilities",
+        "url": "/.claude/agents/hive-mind/swarm-memory-manager.md",
+        "filePath": "/.claude/agents/hive-mind/swarm-memory-manager.md",
+        "type": "markdown",
+        "category": "Agents/Hive-mind",
+        "tags": [
+          "hive-mind",
+          "agent",
+          "swarm",
+          "memory",
+          "manager"
+        ],
+        "description": "**MANDATORY: Continuously write and sync memory state**"
+      },
+      {
+        "id": "agents-hive-mind-worker-specialist",
+        "title": "Core Responsibilities",
+        "url": "/.claude/agents/hive-mind/worker-specialist.md",
+        "filePath": "/.claude/agents/hive-mind/worker-specialist.md",
+        "type": "markdown",
+        "category": "Agents/Hive-mind",
+        "tags": [
+          "hive-mind",
+          "agent",
+          "worker",
+          "specialist"
+        ],
+        "description": "**MANDATORY: Report status before, during, and after every task**"
       }
     ]
   ],
@@ -4142,20 +4180,6 @@ export const DOCUMENTS_BY_CATEGORY = new Map<string, Document[]>(
   [
     "Agents/Optimization",
     [
-      {
-        "id": "agents-optimization-readme",
-        "title": "Performance Optimization Agents",
-        "url": "/.claude/agents/optimization/README.md",
-        "filePath": "/.claude/agents/optimization/README.md",
-        "type": "markdown",
-        "category": "Agents/Optimization",
-        "tags": [
-          "optimization",
-          "agent",
-          "README"
-        ],
-        "description": "This directory contains a comprehensive suite of performance optimization agents designed to maximize swarm efficiency, scalability, and reliability."
-      },
       {
         "id": "agents-optimization-benchmark-suite",
         "title": "Benchmark Suite Agent",
@@ -4320,20 +4344,6 @@ export const DOCUMENTS_BY_CATEGORY = new Map<string, Document[]>(
     "Agents/Swarm",
     [
       {
-        "id": "agents-swarm-readme",
-        "title": "Swarm Coordination Agents",
-        "url": "/.claude/agents/swarm/README.md",
-        "filePath": "/.claude/agents/swarm/README.md",
-        "type": "markdown",
-        "category": "Agents/Swarm",
-        "tags": [
-          "swarm",
-          "agent",
-          "README"
-        ],
-        "description": "This directory contains specialized swarm coordination agents designed to work with the claude-code-flow hive-mind system. Each agent implements a dif"
-      },
-      {
         "id": "agents-swarm-adaptive-coordinator",
         "title": "# Initialize with auto-detection",
         "url": "/.claude/agents/swarm/adaptive-coordinator.md",
@@ -4400,7 +4410,7 @@ export const DOCUMENTS_BY_CATEGORY = new Map<string, Document[]>(
       },
       {
         "id": "agents-templates-coordinator-swarm-init",
-        "title": "# Check for existing swarms",
+        "title": "# Write initial status to memory",
         "url": "/.claude/agents/templates/coordinator-swarm-init.md",
         "filePath": "/.claude/agents/templates/coordinator-swarm-init.md",
         "type": "markdown",
@@ -4412,7 +4422,7 @@ export const DOCUMENTS_BY_CATEGORY = new Map<string, Document[]>(
           "swarm",
           "init"
         ],
-        "description": "memory_search \"swarm_status\" | tail -1 || echo \"No existing swarms found\""
+        "description": "npx claude-flow@alpha memory store \"swarm/init/status\" \"{\\\"status\\\":\\\"initializing\\\",\\\"timestamp\\\":$(date +%s)}\" --namespace coordination"
       },
       {
         "id": "agents-templates-github-pr-manager",
@@ -5611,7 +5621,7 @@ export const DOCUMENTS_BY_CATEGORY = new Map<string, Document[]>(
           "command",
           "overview"
         ],
-        "description": "Automatically coordinate, format, and learn from Claude Code operations using hooks."
+        "description": "Automatically coordinate, format, and learn from Claude Code operations using hooks with MCP tool integration."
       },
       {
         "id": "commands-hooks-post-edit",
@@ -5983,20 +5993,6 @@ export const DOCUMENTS_BY_CATEGORY = new Map<string, Document[]>(
   [
     "Commands/Pair",
     [
-      {
-        "id": "commands-pair-readme",
-        "title": "👥 Pair Programming Command",
-        "url": "/.claude/commands/pair/README.md",
-        "filePath": "/.claude/commands/pair/README.md",
-        "type": "markdown",
-        "category": "Commands/Pair",
-        "tags": [
-          "pair",
-          "command",
-          "README"
-        ],
-        "description": "Collaborative development with real-time verification and AI assistance."
-      },
       {
         "id": "commands-pair-commands",
         "title": "Pair Programming Commands Reference",

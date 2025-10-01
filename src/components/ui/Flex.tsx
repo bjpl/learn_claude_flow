@@ -99,10 +99,11 @@ export const Flex = React.forwardRef<HTMLElement, FlexProps>(
       flexStyles.flexBasis = basis;
     }
 
+    const ElementComponent = Component as any;
     return (
-      <Component ref={ref as any} className={className} style={flexStyles}>
+      <ElementComponent ref={ref} className={className} style={flexStyles}>
         {children}
-      </Component>
+      </ElementComponent>
     );
   }
 );

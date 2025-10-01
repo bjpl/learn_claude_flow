@@ -5,16 +5,35 @@
  */
 
 import React, { useState } from 'react';
-import { DocumentList } from '../components/documentation/DocumentList';
-import { SearchBar } from '../components/documentation/SearchBar';
+import { SearchBar } from '../components/SearchBar';
 import type { Document } from '../types/document';
 
-// Note: DocumentViewer component not yet implemented
+// Note: These components are placeholders for example purposes
 const DocumentViewer = ({ document, onClose }: any) => (
   <div>
     <h2>{document.title}</h2>
     <p>Document viewer placeholder for: {document.filePath}</p>
     {onClose && <button onClick={onClose}>Close</button>}
+  </div>
+);
+
+const DocumentList = ({ documents, onSelectDocument, selectedDocumentId, searchQuery, categoryFilter }: any) => (
+  <div>
+    <h3>Documents</h3>
+    <ul>
+      {documents.filter((doc: Document) =>
+        (!searchQuery || doc.title.toLowerCase().includes(searchQuery.toLowerCase())) &&
+        (!categoryFilter || doc.category === categoryFilter)
+      ).map((doc: Document) => (
+        <li
+          key={doc.id}
+          onClick={() => onSelectDocument(doc)}
+          style={{ fontWeight: doc.id === selectedDocumentId ? 'bold' : 'normal' }}
+        >
+          {doc.title}
+        </li>
+      ))}
+    </ul>
   </div>
 );
 
@@ -195,7 +214,7 @@ export function Example4_LoadFromAPI() {
   return (
     <DocumentList
       documents={documents}
-      onSelectDocument={(doc) => console.log('Selected:', doc)}
+      onSelectDocument={(doc: Document) => console.log('Selected:', doc)}
     />
   );
 }
