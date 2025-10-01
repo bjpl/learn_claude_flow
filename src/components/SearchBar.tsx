@@ -21,7 +21,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   const [value, setValue] = useState(initialValue);
   const [isFocused, setIsFocused] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  const debounceTimerRef = useRef<NodeJS.Timeout>();
+  const debounceTimerRef = useRef<ReturnType<typeof setTimeout>>();
 
   // Update local state when initialValue changes
   useEffect(() => {

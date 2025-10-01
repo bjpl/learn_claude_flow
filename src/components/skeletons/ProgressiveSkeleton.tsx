@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { SkeletonGroup } from './SkeletonBase';
 
 interface ProgressiveSkeletonProps {
   children: React.ReactNode;
@@ -26,7 +25,7 @@ export const ProgressiveSkeleton: React.FC<ProgressiveSkeletonProps> = ({
   const [startTime] = useState(Date.now());
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout>;
 
     if (delay > 0) {
       // Delay showing skeleton to avoid flash for fast loads

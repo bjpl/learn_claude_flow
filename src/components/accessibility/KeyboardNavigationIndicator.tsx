@@ -17,7 +17,6 @@ interface KeyboardNavigationIndicatorProps {
  */
 export const KeyboardNavigationIndicator: React.FC<KeyboardNavigationIndicatorProps> = ({
   showOnlyOnKeyboard = true,
-  className = '',
 }) => {
   const [usingKeyboard, setUsingKeyboard] = useState(false);
 

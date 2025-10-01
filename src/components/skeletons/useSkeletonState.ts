@@ -33,8 +33,8 @@ export const useSkeletonState = (
   const [isLoading, setIsLoading] = useState(initialLoading);
   const [showSkeleton, setShowSkeleton] = useState(false);
   const loadStartTimeRef = useRef<number>(0);
-  const delayTimeoutRef = useRef<NodeJS.Timeout>();
-  const minTimeTimeoutRef = useRef<NodeJS.Timeout>();
+  const delayTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const minTimeTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
 
   const startLoading = useCallback(() => {
     loadStartTimeRef.current = Date.now();
