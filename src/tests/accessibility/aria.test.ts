@@ -1,15 +1,11 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {
   ScreenReaderAnnouncer,
-  useScreenReaderAnnouncer,
-  FocusTrap,
   SkipLinks,
   defaultSkipLinks,
-  KeyboardNavigationIndicator,
-  RouteAnnouncer,
 } from '../../components/accessibility';
 import {
   generateAriaId,
@@ -19,7 +15,6 @@ import {
   createAriaButton,
   announceToScreenReader,
   isFocusable,
-  getFocusableElements,
 } from '../../utils/accessibility/ariaHelpers';
 import {
   focusElement,

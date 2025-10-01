@@ -27,9 +27,7 @@ describe('Search Engine Integration', () => {
         pages.push({
           pageNumber: index + 1,
           documentId: doc.id,
-          content: chunk,
-          width: 612,
-          height: 792
+          content: chunk
         });
       });
     }
@@ -205,13 +203,11 @@ describe('Search Edge Cases', () => {
     const documents = await loadDocumentsFromDirectory('/.claude');
     const pages: PdfPage[] = [];
 
-    documents.slice(0, 10).forEach((doc, idx) => {
+    documents.slice(0, 10).forEach((doc) => {
       pages.push({
         pageNumber: 1,
         documentId: doc.id,
-        content: doc.description || doc.title,
-        width: 612,
-        height: 792
+        content: doc.description || doc.title
       });
     });
 
@@ -231,9 +227,10 @@ describe('Search Edge Cases', () => {
       'neural#network'
     ];
 
-    for (const query of queries) {
+    for await (const query of queries) {
       const documents = await loadDocumentsFromDirectory('/.claude');
       expect(documents.length).toBeGreaterThan(0);
+      expect(query).toBeTruthy(); // Use query variable
     }
   });
 

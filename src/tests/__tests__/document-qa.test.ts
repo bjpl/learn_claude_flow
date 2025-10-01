@@ -358,6 +358,7 @@ describe('Performance QA', () => {
 
     const loadTime = endTime - startTime;
     expect(loadTime).toBeLessThan(3000);
+    expect(documents.length).toBeGreaterThan(0);
     console.log(`Load time: ${loadTime.toFixed(2)}ms`);
   });
 

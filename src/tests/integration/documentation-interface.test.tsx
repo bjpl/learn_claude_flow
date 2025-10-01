@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { render, screen, waitFor, within } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../../App';
 
@@ -152,11 +152,11 @@ describe('Documentation Interface - Integration Tests', () => {
 
   describe('4. Navigation', () => {
     it('✅ expands/collapses tree nodes', async () => {
-      const user = userEvent.setup();
+      userEvent.setup();
       render(<App />);
 
       // Find expandable navigation item
-      const coreConceptsButton = screen.getByText('Core Concepts');
+      screen.getByText('Core Concepts');
 
       // Should have children
       expect(screen.getByText('Architecture')).toBeInTheDocument();
@@ -207,7 +207,7 @@ describe('Documentation Interface - Integration Tests', () => {
     });
 
     it('✅ proper spacing and colors', () => {
-      const { container } = render(<App />);
+      render(<App />);
       const title = screen.getByText('Learn Claude Flow');
 
       expect(title).toHaveClass('text-2xl', 'font-bold', 'text-gray-900');

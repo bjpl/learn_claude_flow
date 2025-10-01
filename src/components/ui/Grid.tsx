@@ -92,15 +92,16 @@ export const Grid = React.forwardRef<HTMLElement, GridProps>(
 
     // Handle responsive columns with CSS variables
     if (typeof columns === 'object') {
-      const responsiveVars = {
+      const responsiveVars: Record<string, number> = {
         '--grid-columns': columns.xs || 1,
-      } as React.CSSProperties;
+      };
 
+      const ElementComponent = Component as React.ElementType;
       return (
-        <Component
-          ref={ref as any}
+        <ElementComponent
+          ref={ref}
           className={className}
-          style={{ ...gridStyles, ...responsiveVars }}
+          style={{ ...gridStyles, ...responsiveVars } as React.CSSProperties}
         >
           <style>{`
             @media (min-width: 640px) { ${Component} { --grid-columns: ${columns.sm || columns.xs || 1}; } }
@@ -109,14 +110,15 @@ export const Grid = React.forwardRef<HTMLElement, GridProps>(
             @media (min-width: 1280px) { ${Component} { --grid-columns: ${columns.xl || columns.lg || columns.md || columns.sm || columns.xs || 1}; } }
           `}</style>
           {children}
-        </Component>
+        </ElementComponent>
       );
     }
 
+    const ElementComponent = Component as React.ElementType;
     return (
-      <Component ref={ref as any} className={className} style={gridStyles}>
+      <ElementComponent ref={ref} className={className} style={gridStyles}>
         {children}
-      </Component>
+      </ElementComponent>
     );
   }
 );

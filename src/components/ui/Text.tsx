@@ -124,10 +124,11 @@ export const Text = React.forwardRef<HTMLElement, TextProps>(
       textStyles_computed.overflow = 'hidden';
     }
 
+    const ElementComponent = Component as React.ElementType;
     return (
-      <Component ref={ref as any} className={className} style={textStyles_computed}>
+      <ElementComponent ref={ref} className={className} style={textStyles_computed as React.CSSProperties}>
         {children}
-      </Component>
+      </ElementComponent>
     );
   }
 );

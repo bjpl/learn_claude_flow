@@ -66,9 +66,10 @@ export const Stack = React.forwardRef<HTMLElement, StackProps>(
       evenly: 'space-evenly',
     }[justify];
 
+    const ElementComponent = Component as React.ElementType;
     return (
-      <Component
-        ref={ref as any}
+      <ElementComponent
+        ref={ref}
         className={className}
         style={{
           display: 'flex',
@@ -78,10 +79,10 @@ export const Stack = React.forwardRef<HTMLElement, StackProps>(
           justifyContent,
           flexWrap: wrap ? 'wrap' : 'nowrap',
           ...style,
-        }}
+        } as React.CSSProperties}
       >
         {children}
-      </Component>
+      </ElementComponent>
     );
   }
 );

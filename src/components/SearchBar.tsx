@@ -8,6 +8,8 @@ interface SearchBarProps {
   initialValue?: string;
   debounceMs?: number;
   className?: string;
+  onCategoryChange?: (category: string) => void;
+  categories?: string[];
 }
 
 export const SearchBar: React.FC<SearchBarProps> = ({

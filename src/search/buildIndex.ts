@@ -109,7 +109,7 @@ function determineCategory(filePath: string, basePath: string): string {
     // Convert path parts to category
     const categoryParts = parts.slice(0, -1);
     return categoryParts
-      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+      .map((part: string) => part.charAt(0).toUpperCase() + part.slice(1))
       .join('/');
   }
 

@@ -7,11 +7,9 @@ interface PerformanceMetrics {
 }
 
 describe('Performance Regression Tests', () => {
-  let startTime: number;
   let startMemory: number;
 
   beforeEach(() => {
-    startTime = performance.now();
     if (typeof process !== 'undefined' && process.memoryUsage) {
       startMemory = process.memoryUsage().heapUsed;
     }
@@ -72,11 +70,11 @@ describe('Performance Regression Tests', () => {
   describe('Object Operations', () => {
     it('should complete object creation within threshold', () => {
       const metrics = measurePerformance(() => {
-        const obj = {
-          id: Math.random(),
-          name: 'Test',
-          data: Array.from({ length: 100 }, (_, i) => i),
-        };
+        {
+          id: Math.random();
+          name: 'Test';
+          data: Array.from({ length: 100 }, (_, i) => i);
+        }
       }, 1000);
 
       expect(metrics.duration).toBeLessThan(50);
@@ -89,7 +87,7 @@ describe('Performance Regression Tests', () => {
       };
 
       const metrics = measurePerformance(() => {
-        const clone = JSON.parse(JSON.stringify(original));
+        JSON.parse(JSON.stringify(original));
       }, 1000);
 
       expect(metrics.duration).toBeLessThan(100);
@@ -100,7 +98,7 @@ describe('Performance Regression Tests', () => {
       const obj2 = { d: 4, e: 5, f: 6 };
 
       const metrics = measurePerformance(() => {
-        const merged = { ...obj1, ...obj2 };
+        ({ ...obj1, ...obj2 });
       }, 10000);
 
       expect(metrics.duration).toBeLessThan(50);
@@ -123,7 +121,7 @@ describe('Performance Regression Tests', () => {
       const metrics = measurePerformance(() => {
         const name = 'Test';
         const value = 123;
-        const result = `Name: ${name}, Value: ${value}`;
+        `Name: ${name}, Value: ${value}`;
       }, 10000);
 
       expect(metrics.duration).toBeLessThan(50);
@@ -166,10 +164,10 @@ describe('Performance Regression Tests', () => {
       };
 
       const metrics = measurePerformance(() => {
-        const updated = {
+        ({
           ...largeState,
           users: [...largeState.users, { id: 1001, name: 'New User', email: 'new@test.com' }],
-        };
+        });
       }, 100);
 
       expect(metrics.duration).toBeLessThan(200);

@@ -140,12 +140,14 @@ export function Example3_WithSearchAndFiltering() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <header style={{ padding: '1rem', borderBottom: '1px solid #ddd' }}>
-        <SearchBar
-          onSearch={setSearchQuery}
-          onCategoryChange={setCategoryFilter}
-          categories={['Tutorial', 'Reference']}
-          placeholder="Search documentation..."
-        />
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <SearchBar
+            onSearch={setSearchQuery}
+            onCategoryChange={setCategoryFilter}
+            categories={['All Categories', 'Tutorial', 'Reference']}
+            placeholder="Search documentation..."
+          />
+        </div>
       </header>
 
       <div style={{ display: 'flex', flex: 1 }}>
