@@ -58,9 +58,8 @@ export default defineConfig({
           }
 
           // UI utilities (moderate size, ~40KB)
-          if (id.includes('node_modules/clsx')) {
-            return 'ui-vendor';
-          }
+          // Note: Removed ui-vendor chunk to prevent load order issues
+          // clsx is small enough to include in vendor chunk
 
           // Keep other node_modules together
           if (id.includes('node_modules')) {
