@@ -22,24 +22,8 @@ export type { ContainerProps } from './Container';
 export { Text, Heading, Body, Label, Caption } from './Text';
 export type { TextProps } from './Text';
 
-// Form Components (from design-system)
-export { Input } from '../../design-system/components/Input';
-export type { InputProps } from '../../design-system/components/Input';
-
-export { Button } from '../../design-system/components/Button';
-export type { ButtonProps } from '../../design-system/components/Button';
-
-export { Card } from '../../design-system/components/Card';
-export type { CardProps } from '../../design-system/components/Card';
-
-export { Badge } from '../../design-system/components/Badge';
-export type { BadgeProps } from '../../design-system/components/Badge';
-
-export { Modal } from '../../design-system/components/Modal';
-export type { ModalProps } from '../../design-system/components/Modal';
-
-export { Progress } from '../../design-system/components/Progress';
-export type { ProgressProps } from '../../design-system/components/Progress';
+// Note: Design system components not yet implemented
+// Will be added in future phase
 
 // Extended Form Components
 export { Select } from './Select';

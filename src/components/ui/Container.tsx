@@ -71,7 +71,7 @@ export const Container = React.forwardRef<HTMLElement, ContainerProps>(
     }
 
     return (
-      <Component ref={ref as any} className={className} style={containerStyles}>
+      <Component ref={ref as React.Ref<any>} className={className} style={containerStyles}>
         {children}
       </Component>
     );

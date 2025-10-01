@@ -3,7 +3,7 @@ import { colors } from '../../design-system/tokens/colors';
 import { radius } from '../../design-system/tokens/radius';
 import { spacing } from '../../design-system/tokens/spacing';
 import { textStyles } from '../../design-system/tokens/typography';
-import { shadows, focusRings } from '../../design-system/tokens/shadows';
+import { focusRings } from '../../design-system/tokens/shadows';
 
 export interface SelectOption {
   value: string;
@@ -125,11 +125,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
       selectStyles.boxShadow = error ? focusRings.error : focusRings.default;
     }
 
-    if (!disabled && !error) {
-      selectStyles[':hover' as any] = {
-        borderColor: colors.ui.border.dark,
-      };
-    }
+    // Hover styles handled by CSS
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       onChange?.(e.target.value);

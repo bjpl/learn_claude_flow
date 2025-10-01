@@ -18,6 +18,8 @@ export interface AvatarProps {
   status?: 'online' | 'offline' | 'away' | 'busy';
   /** Additional CSS classes */
   className?: string;
+  /** Custom inline styles */
+  style?: React.CSSProperties;
 }
 
 /**
@@ -39,6 +41,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       shape = 'circle',
       status,
       className = '',
+      style,
     },
     ref
   ) => {
