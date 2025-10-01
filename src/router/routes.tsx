@@ -10,7 +10,7 @@ import { ErrorBoundary } from '../components/ErrorBoundary';
 
 // Eager loaded (critical path)
 import { RootLayout } from '../layouts/RootLayout';
-import { OverviewDashboard } from '../components/OverviewDashboard';
+import { DocumentationApp } from '../components/DocumentationApp';
 
 // Lazy loaded (code splitting)
 const DocumentViewerRoute = lazy(() => import('../views/DocumentViewerRoute'));
@@ -26,18 +26,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <OverviewDashboard
-          documents={[]}
-          knowledgeGraph={{
-            nodes: new Map(),
-            categories: new Map(),
-            searchIndex: new Map(),
-            frequentlyUsed: []
-          }}
-          onCategorySelect={() => {}}
-          onDocumentSelect={() => {}}
-          onSearchFocus={() => {}}
-        />,
+        element: <DocumentationApp />,
       },
       {
         path: 'doc/:documentId',
